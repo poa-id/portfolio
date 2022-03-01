@@ -1,0 +1,112 @@
+#home {
+  position: relative;
+  background: #f4f4f4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+
+  // disable the default padding styles
+  .app__wrapper {
+    padding: 0;
+  }
+}
+
+.app__header {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+    .app__header-img {
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+  }
+}
+
+//This section is a mess - order ASAP
+
+.app__header-typewriter {
+  position: absolute;
+  margin: auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.app__header-hero1 {
+  font-size: 5rem;
+  z-index: 3;
+  color: #f4f4f4;
+  font-weight: 800;
+  text-transform: capitalize;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  animation: typing 0.6s steps(10, end) forwards;
+  animation-delay: 0.2s;
+
+  @media screen and (max-width: 450px) {
+    font-size: 3rem;
+  }
+}
+.app__header-hero2 {
+  font-size: 5rem;
+  z-index: 3;
+  color: #f4f4f4;
+  font-weight: 800;
+  text-transform: capitalize;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  animation: typing 0.8s steps(21, end) forwards;
+  animation-delay: 1.1s;
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+.app__header-img {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+
+  img {
+    .overlay_circle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .overlay_circle {
+    display: none;
+  }
+
+  .app__header {
+    background-color: var(--secondary-color);
+    margin-top: 6rem;
+  }
+}
