@@ -10,7 +10,7 @@ const Header = () => {
   return(
   <div className="app__header app__flex">
     <div className='app__header-typewriter'>
-      <p className='app__header-hero1'>Hi there!</p><p className='app__header-hero2'>This is my portfolio.</p>
+      <p className='app__header-hero1'>I'm Peter,</p><p className='app__header-hero2'>Web and Brand Designer</p>
     </div>
       
       <motion.img
